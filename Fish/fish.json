@@ -1,0 +1,765 @@
+{
+  "misc": {
+    "56": {
+      "name": "Anchovy",
+      "location": "Sea",
+      "size": "2",
+      "price": 200,
+      "time": "4 AM - 9 PM",
+      "quote": "$user caught an anchovy! Stay away from my pizza!",
+      "rarity": "???"
+    },
+    "29": {
+      "name": "Golden trout",
+      "location": "River (Clifftop)",
+      "size": "3",
+      "price": 15000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a golden trout! But the real treasure? Friendship.",
+      "rarity": "???"
+    },
+    "69": {
+      "name": "Mahi-mahi",
+      "location": "Pier",
+      "size": "5",
+      "price": 6000,
+      "time": "All day",
+      "quote": "",
+      "rarity": "???"
+    },
+    "39": {
+      "name": "Rainbowfish",
+      "location": "River",
+      "size": "1",
+      "price": 800,
+      "time": "9 AM - 4 PM",
+      "quote": "",
+      "rarity": "???"
+    },
+    "23": {
+      "name": "Tilapia",
+      "location": "River",
+      "size": "3",
+      "price": 800,
+      "time": "All day",
+      "quote": "$user caught a tilapia! It makes me happy-a!",
+      "rarity": "???"
+    }
+  },
+  "miss": {
+    "0": {
+      "name": "Boot",
+      "location": "",
+      "size": "",
+      "price": 0,
+      "time": "All day",
+      "quote": "$user caught a boot! It, uh, wasn't made for swimming.",
+      "rarity": "???"
+    },
+    "1": {
+      "name": "Empty Can",
+      "location": "",
+      "size": "",
+      "price": 0,
+      "time": "All day",
+      "quote": "$user caught an empty can! Aren't you supposed to catch the fish before you can it?",
+      "rarity": "???"
+    },
+    "2": {
+      "name": "Old Tire",
+      "location": "",
+      "size": "",
+      "price": 0,
+      "time": "All day",
+      "quote": "$user caught an old tire! I sure am tired of that!",
+      "rarity": "???"
+    }
+  },
+  "common": {
+    "1": {
+      "name": "Bitterling",
+      "location": "River",
+      "size": "1",
+      "price": 900,
+      "time": "All day",
+      "quote": "$user caught a bitterling! It's mad at me, but only a little.",
+      "rarity": "Common"
+    },
+    "22": {
+      "name": "Black bass",
+      "location": "River",
+      "size": "4",
+      "price": 320,
+      "time": "All day",
+      "quote": "$user caught a black bass! The most metal of all fish!",
+      "rarity": "Common"
+    },
+    "11": {
+      "name": "Crawfish",
+      "location": "Pond",
+      "size": "2",
+      "price": 200,
+      "time": "All day",
+      "quote": "$user caught a crawfish! Or else it's a lobster, and I'm a giant!",
+      "rarity": "Common"
+    },
+    "15": {
+      "name": "Frog",
+      "location": "Pond",
+      "size": "2",
+      "price": 120,
+      "time": "All day",
+      "quote": "$user caught a frog! Hop to it, froggie!",
+      "rarity": "Common"
+    },
+    "57": {
+      "name": "Horse mackerel",
+      "location": "Sea",
+      "size": "2",
+      "price": 150,
+      "time": "All day",
+      "quote": "$user caught a horse mackerel! Of course, Mack...er..el.",
+      "rarity": "Common"
+    },
+    "17": {
+      "name": "Loach",
+      "location": "River",
+      "size": "2",
+      "price": 400,
+      "time": "All day",
+      "quote": "$user caught a loach! It's ... looking at me with reproach.",
+      "rarity": "Common"
+    },
+    "25": {
+      "name": "Pond smelt",
+      "location": "River",
+      "size": "2",
+      "price": 500,
+      "time": "All day",
+      "quote": "$user caught a pond smelt! Whoever smelt it dealt it!",
+      "rarity": "Common"
+    },
+    "31": {
+      "name": "Salmon",
+      "location": "River (Mouth)",
+      "size": "4",
+      "price": 700,
+      "time": "All day",
+      "quote": "$user caught a salmon! Oh, that's slammin'!",
+      "rarity": "Common"
+    },
+    "59": {
+      "name": "Sea bass",
+      "location": "Sea",
+      "size": "5",
+      "price": 400,
+      "time": "All day",
+      "quote": "$user caught a sea bass! No, wait- it's at least a C+!",
+      "rarity": "Common"
+    },
+    "14": {
+      "name": "Tadpole",
+      "location": "Pond",
+      "size": "1",
+      "price": 100,
+      "time": "All day",
+      "quote": "$user caught a tadpole... I'm sure it will grow on me.",
+      "rarity": "Common"
+    },
+    "53": {
+      "name": "Zebra turkeyfish",
+      "location": "Sea",
+      "size": "3",
+      "price": 500,
+      "time": "All day",
+      "quote": "$user caught a zebra turkeyfish! Land, air, water--make up your mind!",
+      "rarity": "Common"
+    }
+  },
+  "fairly common": {
+    "5": {
+      "name": "Carp",
+      "location": "Pond",
+      "size": "4",
+      "price": 300,
+      "time": "All day",
+      "quote": "$user caught a carp! If I catch another they can carpool!",
+      "rarity": "Fairly Common"
+    },
+    "18": {
+      "name": "Catfish",
+      "location": "Pond",
+      "size": "4",
+      "price": 800,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a catfish! Who's meowing now?!",
+      "rarity": "Fairly Common"
+    },
+    "3": {
+      "name": "Crucian carp",
+      "location": "River",
+      "size": "2",
+      "price": 160,
+      "time": "All day",
+      "quote": "$user caught a crucian carp! My skills are sharp!",
+      "rarity": "Fairly Common"
+    },
+    "61": {
+      "name": "Dab",
+      "location": "Sea",
+      "size": "3",
+      "price": 300,
+      "time": "All day",
+      "quote": "$user caught a dab! Not bad!",
+      "rarity": "Fairly Common"
+    },
+    "4": {
+      "name": "Dace",
+      "location": "River",
+      "size": "3",
+      "price": 240,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a dace! Hope I have some space!",
+      "rarity": "Fairly Common"
+    },
+    "63": {
+      "name": "Squid",
+      "location": "Sea",
+      "size": "3",
+      "price": 500,
+      "time": "All day",
+      "quote": "$user caught a squid! It's off the hook!",
+      "rarity": "Fairly Common"
+    },
+    "26": {
+      "name": "Sweetfish",
+      "location": "River",
+      "size": "3",
+      "price": 900,
+      "time": "All day",
+      "quote": "$user caught a sweetfish! Hope it's not artificially sweet!",
+      "rarity": "Fairly Common"
+    },
+    "21": {
+      "name": "Yellow perch",
+      "location": "River",
+      "size": "3",
+      "price": 300,
+      "time": "All day",
+      "quote": "$user caught a yellow perch! Those yellow birds have to sit somewhere!",
+      "rarity": "Fairly Common"
+    }
+  },
+  "uncommon": {
+    "36": {
+      "name": "Angelfish",
+      "location": "River",
+      "size": "2",
+      "price": 3000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught an angelfish! That other fish told me to do it!",
+      "rarity": "Uncommon"
+    },
+    "20": {
+      "name": "Bluegill",
+      "location": "River",
+      "size": "2",
+      "price": 180,
+      "time": "9 AM - 4 PM",
+      "quote": "$user caught a bluegill! Do you think it calls me pinklung?",
+      "rarity": "Uncommon"
+    },
+    "37": {
+      "name": "Betta",
+      "location": "River",
+      "size": "2",
+      "price": 2500,
+      "time": "9 AM - 4 PM",
+      "quote": "",
+      "rarity": "Uncommon"
+    },
+    "51": {
+      "name": "Butterfly fish",
+      "location": "Sea",
+      "size": "2",
+      "price": 1000,
+      "time": "All day",
+      "quote": "$user caught a butterfly fish! Did it change from a caterpillar fish?",
+      "rarity": "Uncommon"
+    },
+    "28": {
+      "name": "Char",
+      "location": "River (Clifftop) Pond",
+      "size": "3",
+      "price": 3800,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a char! Now I'm gonna sit on it!",
+      "rarity": "Uncommon"
+    },
+    "27": {
+      "name": "Cherry salmon",
+      "location": "River (Clifftop)",
+      "size": "3",
+      "price": 800,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a cherry salmon! Now for a cherry-salmon pie!",
+      "rarity": "Uncommon"
+    },
+    "49": {
+      "name": "Clown fish",
+      "location": "Sea",
+      "size": "1",
+      "price": 650,
+      "time": "All day",
+      "quote": "$user caught a clown fish! How many can fit in a carfish?  ",
+      "rarity": "Uncommon"
+    },
+    "77": {
+      "name": "Football fish",
+      "location": "Sea",
+      "size": "4",
+      "price": 2500,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a football fish! Some countries call it a soccer fish!",
+      "rarity": "Uncommon"
+    },
+    "19": {
+      "name": "Giant snakehead",
+      "location": "Pond",
+      "size": "4",
+      "price": 5500,
+      "time": "9 AM - 4 PM",
+      "quote": "$user caught a giant snakehead! But where's the rest of the snake?",
+      "rarity": "Uncommon"
+    },
+    "10": {
+      "name": "Killifish",
+      "location": "Pond",
+      "size": "1",
+      "price": 300,
+      "time": "All day",
+      "quote": "$user caught a killifish! The streams are safe again.",
+      "rarity": "Uncommon"
+    },
+    "64": {
+      "name": "Moray eel",
+      "location": "Sea",
+      "size": "Narrow",
+      "price": 2000,
+      "time": "All day",
+      "quote": "$user caught a moray eel! And I was like, No way! Deal!",
+      "rarity": "Uncommon"
+    },
+    "38": {
+      "name": "Neon tetra",
+      "location": "River",
+      "size": "1",
+      "price": 500,
+      "time": "9 AM - 4 PM",
+      "quote": "$user caught a neon tetra! Wasn't hard to track.",
+      "rarity": "Uncommon"
+    },
+    "62": {
+      "name": "Olive flounder",
+      "location": "Sea",
+      "size": "5",
+      "price": 800,
+      "time": "All day",
+      "quote": "$user caught an olive flounder! That's not the pits!",
+      "rarity": "Uncommon"
+    },
+    "2": {
+      "name": "Pale chub",
+      "location": "River",
+      "size": "1",
+      "price": 200,
+      "time": "9 AM - 4 PM",
+      "quote": "$user caught a pale chub! That name seems a bit judgy...",
+      "rarity": "Uncommon"
+    },
+    "24": {
+      "name": "Pike",
+      "location": "River",
+      "size": "5",
+      "price": 1800,
+      "time": "All day",
+      "quote": "$user caught a pike! Oh, yes, I like!",
+      "rarity": "Uncommon"
+    },
+    "40": {
+      "name": "Piranha",
+      "location": "River",
+      "size": "2",
+      "price": 2500,
+      "time": "9 AM - 4 PM & 9 PM - 4 AM",
+      "quote": "$user caught a piranha! Or did it catch ME?!",
+      "rarity": "Uncommon"
+    },
+    "55": {
+      "name": "Puffer fish",
+      "location": "Sea",
+      "size": "3",
+      "price": 250,
+      "time": "All day",
+      "quote": "$user caught a puffer fish! I thought you would be tougher, fish!",
+      "rarity": "Uncommon"
+    },
+    "60": {
+      "name": "Red snapper",
+      "location": "Sea",
+      "size": "4",
+      "price": 3000,
+      "time": "All day",
+      "quote": "$user caught a red snapper! It looks pretty dapper!",
+      "rarity": "Uncommon"
+    },
+    "65": {
+      "name": "Ribbon eel",
+      "location": "Sea",
+      "size": "Narrow",
+      "price": 600,
+      "time": "All day",
+      "quote": "$user caught a ribbon eel! Good for tying on presents!",
+      "rarity": "Uncommon"
+    },
+    "47": {
+      "name": "Sea butterfly",
+      "location": "Sea",
+      "size": "1",
+      "price": 1000,
+      "time": "All day",
+      "quote": "$user caught a sea butterfly! Try not to confuse it for a sea moth!",
+      "rarity": "Uncommon"
+    },
+    "48": {
+      "name": "Sea horse",
+      "location": "Sea",
+      "size": "1",
+      "price": 1100,
+      "time": "All day",
+      "quote": "$user caught a sea horse! But...where's its sea jockey?",
+      "rarity": "Uncommon"
+    },
+    "13": {
+      "name": "Snapping Turtle",
+      "location": "River",
+      "size": "4",
+      "price": 5000,
+      "time": "9 PM - 4 AM",
+      "quote": "$user caught a snapping turtle! How can it snap without fingers?",
+      "rarity": "Uncommon"
+    },
+    "76": {
+      "name": "Suckerfish",
+      "location": "Sea",
+      "size": "4 (Fin)",
+      "price": 1500,
+      "time": "All day",
+      "quote": "$user caught a suckerfish! I thought it was a shark! Oh, wait - now I get it. Sucker...",
+      "rarity": "Uncommon"
+    },
+    "50": {
+      "name": "Surgeonfish",
+      "location": "Sea",
+      "size": "2",
+      "price": 1000,
+      "time": "All day",
+      "quote": "$user caught a surgeonfish! It was a simple operation, though!",
+      "rarity": "Uncommon"
+    }
+  },
+  "scarce": {
+    "58": {
+      "name": "Barred knifejaw",
+      "location": "Sea",
+      "size": "3",
+      "price": 5000,
+      "time": "All day",
+      "quote": "$user caught a barred knifejaw! They must have a hard time eating!",
+      "rarity": "Scarce"
+    },
+    "54": {
+      "name": "Blowfish",
+      "location": "Sea",
+      "size": "3",
+      "price": 5000,
+      "time": "9 PM - 4 AM",
+      "quote": "$user caught a blowfish! And that's not just hot air!",
+      "rarity": "Scarce"
+    },
+    "67": {
+      "name": "Blue marlin",
+      "location": "Pier",
+      "size": "6",
+      "price": 10000,
+      "time": "All day",
+      "quote": "$user caught a blue marlin! Listen to this fish. it's got a point.",
+      "rarity": "Scarce"
+    },
+    "43": {
+      "name": "Gar",
+      "location": "Pond",
+      "size": "5",
+      "price": 6000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a gar! It ain't gettin' too far!",
+      "rarity": "Scarce"
+    },
+    "68": {
+      "name": "Giant trevally",
+      "location": "Pier",
+      "size": "5",
+      "price": 4500,
+      "time": "All day",
+      "quote": "$user caught a giant trevally! Pfff. I've seen bigger!",
+      "rarity": "Scarce"
+    },
+    "7": {
+      "name": "Goldfish",
+      "location": "Pond",
+      "size": "1",
+      "price": 1300,
+      "time": "All day",
+      "quote": "$user caught a goldfish! It's worth its weight in fish!",
+      "rarity": "Scarce"
+    },
+    "34": {
+      "name": "Guppy",
+      "location": "River",
+      "size": "1",
+      "price": 1300,
+      "time": "9 AM - 4 PM",
+      "quote": "$user caught a guppy! Welcome to the team, newbie!",
+      "rarity": "Scarce"
+    },
+    "73": {
+      "name": "Hammerhead shark",
+      "location": "Sea",
+      "size": "6 (Fin)",
+      "price": 8000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a hammerhead shark! I really nailed it!",
+      "rarity": "Scarce"
+    },
+    "32": {
+      "name": "King salmon",
+      "location": "River (Mouth)",
+      "size": "6",
+      "price": 1800,
+      "time": "All day",
+      "quote": "Yes! $user caught a King salmon! Checkmate!",
+      "rarity": "Scarce"
+    },
+    "6": {
+      "name": "Koi",
+      "location": "Pond",
+      "size": "4",
+      "price": 4000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a koi! I don't know why it's so shy... or such a bad speller...",
+      "rarity": "Scarce"
+    },
+    "33": {
+      "name": "Mitten crab",
+      "location": "River",
+      "size": "2",
+      "price": 2000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a mitten crab! I'm smitten, crab!",
+      "rarity": "Scarce"
+    },
+    "52": {
+      "name": "Napoleonfish",
+      "location": "Sea",
+      "size": "6",
+      "price": 10000,
+      "time": "4 AM - 9 PM",
+      "quote": "$user caught a Napoleonfish! It's not as big as it thinks!",
+      "rarity": "Scarce"
+    },
+    "35": {
+      "name": "Nibble fish",
+      "location": "River",
+      "size": "1",
+      "price": 1500,
+      "time": "9 AM - 4 PM",
+      "quote": "$user caught a nibble fish! Do you regret nibbling now?",
+      "rarity": "Scarce"
+    },
+    "78": {
+      "name": "Oarfish",
+      "location": "Sea",
+      "size": "6",
+      "price": 9000,
+      "time": "All day",
+      "quote": "$user caught an oarfish! I hope I catch morefish!",
+      "rarity": "Scarce"
+    },
+    "8": {
+      "name": "Pop-eyed goldfish",
+      "location": "Pond",
+      "size": "1",
+      "price": 1300,
+      "time": "9 AM - 4 PM",
+      "quote": "$user got a pop-eyed goldfish! $usert looks so...surprised!",
+      "rarity": "Scarce"
+    },
+    "71": {
+      "name": "Ray",
+      "location": "Sea",
+      "size": "5",
+      "price": 3000,
+      "time": "4 AM - 9 PM",
+      "quote": "$user caught a ray! A few more and I'll have a tan!",
+      "rarity": "Scarce"
+    },
+    "12": {
+      "name": "Soft-shelled turtle",
+      "location": "River",
+      "size": "4",
+      "price": 3750,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a soft-shelled turtle! I can really shell it out!",
+      "rarity": "Scarce"
+    },
+    "46": {
+      "name": "Sturgeon",
+      "location": "River (Mouth)",
+      "size": "6",
+      "price": 10000,
+      "time": "All day",
+      "quote": "$user caught a sturgeon! Wonder if it can perform sturgery...",
+      "rarity": "Scarce"
+    },
+    "66": {
+      "name": "Tuna",
+      "location": "Pier",
+      "size": "6",
+      "price": 7000,
+      "time": "All day",
+      "quote": "$user caught a tuna! It's a little off-key!",
+      "rarity": "Scarce"
+    },
+    "75": {
+      "name": "Whale shark",
+      "location": "Sea",
+      "size": "6 (Fin)",
+      "price": 13000,
+      "time": "All day",
+      "quote": "Thar she blows! $user caught a whale shark! I'm tellin' ya, it was thiiiiiiiiiiiiiiiiiiiis big!",
+      "rarity": "Scarce"
+    }
+  },
+  "rare": {
+    "44": {
+      "name": "Arapaima",
+      "location": "River",
+      "size": "6",
+      "price": 10000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught an arapaima! How did it get here? Arapaiknow!",
+      "rarity": "Rare"
+    },
+    "41": {
+      "name": "Arowana",
+      "location": "River",
+      "size": "4",
+      "price": 10000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught an arowana! I'd make a joke, but I don't 'wana.",
+      "rarity": "Rare"
+    },
+    "16": {
+      "name": "Freshwater goby",
+      "location": "River",
+      "size": "2",
+      "price": 400,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a freshwater goby! You fresh, goby!",
+      "rarity": "Rare"
+    },
+    "70": {
+      "name": "Ocean sunfish",
+      "location": "Sea",
+      "size": "6 (Fin)",
+      "price": 4000,
+      "time": "4 AM - 9 PM",
+      "quote": "$user caught an ocean sunfish! My day is brighter already!",
+      "rarity": "Rare"
+    },
+    "9": {
+      "name": "Ranchu goldfish",
+      "location": "Pond",
+      "size": "2",
+      "price": 4500,
+      "time": "9 AM - 4 PM",
+      "quote": "$user caught a ranchu goldfish! But I prefer balsamicu goldfish!",
+      "rarity": "Rare"
+    },
+    "45": {
+      "name": "Saddled bichir",
+      "location": "River",
+      "size": "4",
+      "price": 4000,
+      "time": "9 PM - 4 AM",
+      "quote": "Wow! A saddled bichir! Now $user is saddled with guilt!",
+      "rarity": "Rare"
+    },
+    "72": {
+      "name": "Saw shark",
+      "location": "Sea",
+      "size": "6 (Fin)",
+      "price": 12000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a saw shark! And yet it didn't see me coming!",
+      "rarity": "Scarce"
+    }
+  },
+  "very rare": {
+    "80": {
+      "name": "Coelacanth",
+      "location": "Sea (while raining)",
+      "size": "6",
+      "price": 15000,
+      "time": "All day",
+      "quote": "Blast from the past! $user caught a coelacanth! Think positive! Be a coela-CAN!",
+      "rarity": "Very Rare"
+    },
+    "42": {
+      "name": "Dorado",
+      "location": "River",
+      "size": "5",
+      "price": 15000,
+      "time": "4 AM - 9 PM",
+      "quote": "$user caught a dorado! I should make that my motto!",
+      "rarity": "Very Rare"
+    },
+    "74": {
+      "name": "Great white shark",
+      "location": "Sea",
+      "size": "6 (Fin)",
+      "price": 15000,
+      "time": "4 PM - 9 AM",
+      "quote": "$user caught a shark! GAH! Why am I holding it?!",
+      "rarity": "Very Rare"
+    },
+    "79": {
+      "name": "Barreleye",
+      "location": "Sea",
+      "size": "2",
+      "price": 15000,
+      "time": "9 PM - 4 AM",
+      "quote": "$user caught a barreleye! Like eyeing a fish in a barrel!",
+      "rarity": "Scarce"
+    },
+    "30": {
+      "name": "Stringfish",
+      "location": "River (Clifftop)",
+      "size": "5",
+      "price": 15000,
+      "time": "4 PM - 9 AM",
+      "quote": "OH MY GOSH! $user caught a stringfish! Five more and I'll have a guitarfish!",
+      "rarity": "Rare"
+    }
+  }
+}

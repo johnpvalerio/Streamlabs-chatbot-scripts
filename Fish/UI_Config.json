@@ -1,0 +1,138 @@
+{
+  "output_file": "config.json",
+  "start": {
+    "type": "button",
+    "label": "Start Event",
+    "tooltip": "Starts the event!",
+    "function": "startTimer",
+    "wsevent": "",
+    "group": "General"
+  },
+  "stop": {
+    "type": "button",
+    "label": "Stop event",
+    "tooltip": "Resets from before start button pressed",
+    "function": "Unload",
+    "wsevent": "",
+    "group": "General"
+  },
+  "liveOnly": {
+    "type": "checkbox",
+    "value": false,
+    "label": "Live Only Mode",
+    "tooltip": "True if you want it to only run when you are live",
+    "group": "General"
+  },
+  "command": {
+    "type": "textbox",
+    "value": "!fish",
+    "label": "Command",
+    "tooltip": "Name of the command",
+    "group": "General"
+  },
+  "alias": {
+    "type": "textbox",
+    "value": "!f",
+    "label": "Alias",
+    "tooltip": "Name of the alias. (Usually a short call for the command)",
+    "group": "General"
+  },
+    "useCost": {
+    "type": "numberbox",
+    "label": "Cost",
+    "value": 10,
+    "tooltip": "Command currency cost.",
+    "group": "General"
+  },
+  "activeSec": {
+    "type": "numberbox",
+    "label": "Active period (seconds)",
+    "value": 60,
+    "tooltip": "How long the event lasts (in sec)",
+    "group": "Command Cooldown"
+  },
+  "cmdCdMin": {
+    "type": "numberbox",
+    "label": "Cooldown (minutes)",
+    "value": 30,
+    "tooltip": "Cooldown in minutes.",
+    "group": "Command Cooldown"
+  },
+  "cmdCdSec": {
+    "type": "numberbox",
+    "label": "Cooldown (seconds)",
+    "value": 0,
+    "tooltip": "Cooldown in seconds.",
+    "group": "Command Cooldown"
+  },
+  "topCatch": {
+    "type": "checkbox",
+    "value": true,
+    "label": "Display top catch",
+    "tooltip": "Displays user with biggest catch.",
+    "group": "Messages"
+  },
+  "startMsg": {
+    "type": "textbox",
+    "value": "Nobody can resist the siren song of the Fishing Tourney. Start castin' !fish ($cost)",
+    "label": "Event start message",
+    "tooltip": "Use $time or $cost as arguments",
+    "group": "Messages"
+  },
+  "stopMsg": {
+    "type": "textbox",
+    "value": "Reel it in! The Fishing Tourney is Over!",
+    "label": "Event end message",
+    "tooltip": "Use $time for variable",
+    "group": "Messages"
+  },
+  "missChance": {
+    "type": "numberbox",
+    "label": "Miss chance",
+    "value": 10,
+    "tooltip": "Chance to get this rarity",
+    "group": "Chances"
+  },
+  "commonChance": {
+    "type": "numberbox",
+    "label": "Common fish chance",
+    "value": 45,
+    "tooltip": "Chance to get this rarity",
+    "group": "Chances"
+  },
+  "fCommChance": {
+    "type": "numberbox",
+    "label": "Fairly common fish chance",
+    "value": 20,
+    "tooltip": "Chance to get this rarity",
+    "group": "Chances"
+  },
+  "uCommChance": {
+    "type": "numberbox",
+    "label": "Uncommon fish chance",
+    "value": 15,
+    "tooltip": "Chance to get this rarity",
+    "group": "Chances"
+  },
+  "scarceChance": {
+    "type": "numberbox",
+    "label": "Scarce fish chance",
+    "value": 6,
+    "tooltip": "Chance to get this rarity",
+    "group": "Chances"
+  },
+  "rareChance": {
+    "type": "numberbox",
+    "label": "Rare fish chance",
+    "value": 3,
+    "tooltip": "Chance to get this rarity",
+    "group": "Chances"
+  },
+  "vRareChance": {
+    "type": "numberbox",
+    "label": "Very rare fish chance",
+    "value": 1,
+    "tooltip": "Chance to get this rarity",
+    "group": "Chances"
+  }
+}
