@@ -24,12 +24,10 @@ def Init():
     try:
         with codecs.open(os.path.join(path, configFile), encoding='utf-8-sig', mode='r') as file:
             settings = json.load(file, encoding='utf-8-sig')
-    except:
+    except IOError:
         settings = {
             "command": "!gamble",
             "alias": "!g",
-            "winResponse": "$user has doubled their earnings!",
-            "loseResponse": "$User has lost all their earnings!",
             "winThresh": 50,
             "rewardMul": 1,
             "useCooldown": True,
