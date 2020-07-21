@@ -1,10 +1,14 @@
+# ---------------------------------------
+# Libraries and references
+# ---------------------------------------
 import os
 import sys
 import json
 import codecs
-
 import clr
-
+# ---------------------------------------
+# [Required] Script information
+# ---------------------------------------
 clr.AddReference("IronPython.SQLite.dll")
 clr.AddReference("IronPython.Modules.dll")
 
@@ -13,6 +17,9 @@ Website = "https://github.com/johnpvalerio"
 Description = "Rolls a given type of dice for Streamlabs Bot"
 Creator = "AegisBlue"
 Version = "1.0.0"
+# ---------------------------------------
+# Variables
+# ---------------------------------------
 configFile = "config.json"
 settings = {}
 
@@ -24,7 +31,7 @@ def Init():
     try:
         with codecs.open(os.path.join(path, configFile), encoding='utf-8-sig', mode='r') as file:
             settings = json.load(file, encoding='utf-8-sig')
-    except FileExistsError:
+    except IOError:
         settings = {
             "command": "!roll",
             "alias": '!dice',
