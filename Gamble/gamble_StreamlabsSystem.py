@@ -1,18 +1,25 @@
+# ---------------------------------------
+# Libraries and references
+# ---------------------------------------
 import os
 import sys
 import json
 import codecs
-
 import clr
 
 clr.AddReference("IronPython.SQLite.dll")
 clr.AddReference("IronPython.Modules.dll")
-
+# ---------------------------------------
+# [Required] Script information
+# ---------------------------------------
 ScriptName = "Gambling Script"
 Website = "https://github.com/johnpvalerio"
 Description = "Gambling mini game for Streamlabs Bot"
 Creator = "AegisBlue"
 Version = "1.0.0"
+# ---------------------------------------
+# Variables
+# ---------------------------------------
 configFile = "config.json"
 settings = {}
 
