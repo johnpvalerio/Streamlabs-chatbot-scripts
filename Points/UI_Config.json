@@ -1,0 +1,38 @@
+{
+  "output_file": "config.json",
+  "liveOnly": {
+    "type": "checkbox",
+    "value": false,
+    "label": "Live Only Mode",
+    "tooltip": "True if you want it to only run when you are live",
+    "group": "General"
+  },
+  "command": {
+    "type": "textbox",
+    "value": "!give",
+    "label": "Command",
+    "tooltip": "Name of the command.\nInput format: !<command name> <user target> [amount]",
+    "group": "General"
+  },
+  "alias": {
+    "type": "textbox",
+    "value": "!g",
+    "label": "Alias",
+    "tooltip": "Name of the alias. (Usually a short call for the command)",
+    "group": "General"
+  },
+    "defaultPoints": {
+    "type": "numberbox",
+    "label": "Default amount",
+    "value": 50,
+    "tooltip": "Set how many points is given if no amount is entered.",
+    "group": "General"
+  },
+    "outputMsg": {
+    "type": "textbox",
+    "value": "Successfully given $user $points $currency",
+    "label": "Output message",
+    "tooltip": "Message to display when successfully given points. use '$user', '$points','$currency' as replacements",
+    "group": "General"
+  }
+}
