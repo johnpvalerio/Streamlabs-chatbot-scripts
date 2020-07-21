@@ -1,20 +1,27 @@
+# ---------------------------------------
+# Libraries and references
+# ---------------------------------------
 import os
 import random
 import json
 import codecs
 import time
 from collections import defaultdict
-
 import clr
 
 clr.AddReference("IronPython.SQLite.dll")
 clr.AddReference("IronPython.Modules.dll")
-
+# ---------------------------------------
+# [Required] Script information
+# ---------------------------------------
 ScriptName = "AC Fishing Script"
 Website = "https://github.com/johnpvalerio"
 Description = "Fish animal crossing creatures"
 Creator = "AegisBlue"
-Version = "1.0.4.1"
+Version = "1.0.4"
+# ---------------------------------------
+# Variables
+# ---------------------------------------
 configFile = "config.json"
 fishFile = 'fish.json'
 playerFile = 'player.json'
