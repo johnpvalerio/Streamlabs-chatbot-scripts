@@ -1,7 +1,7 @@
 # ---------------------------------------
 # Script information
 # ---------------------------------------
-ScriptName = "Default Points Giving Script"
+ScriptName = "Gambling Script"
 Website = "https://github.com/johnpvalerio"
 Description = "Gambling mini game for Streamlabs Bot."
 Creator = "AegisBlue"
@@ -31,7 +31,7 @@ Afterwards the list of installed scripts should appear and you can start configu
 Command format
 !<command name> <amount>
     <command name>  - given command name or command alias, not case sensitive
-                        DEFAULT: "!give" or "!g"
+                        DEFAULT: "!gamble" or "!g"
     <amount>        - amount of channel points to wager
                        may be number, percentage or "all"
                        if decimal, will be rounded down to nearest integer
