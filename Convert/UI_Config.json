@@ -1,0 +1,59 @@
+{
+  "output_file": "config.json",
+  "rewardName": {
+    "type": "textbox",
+    "value": "",
+    "label": "Reward Name",
+    "tooltip": "Name of the reward",
+    "group": "General"
+  },
+  "liveOnly": {
+    "type": "checkbox",
+    "value": false,
+    "label": "Live Only Mode",
+    "tooltip": "True if you want it to only run when you are live",
+    "group": "General"
+  },
+  "useOutputMsg": {
+    "type": "checkbox",
+    "value": false,
+    "label": "Output message in chat",
+    "tooltip": "",
+    "group": "General"
+  },
+  "outputMsg": {
+    "type": "textbox",
+    "value": "$user gained $points $currency",
+    "label": "Output message",
+    "tooltip": "Message to display when successfully given points. use '$user', '$points','$currency' as replacements",
+    "group": "General"
+  },
+  "useRewardCost": {
+    "type": "checkbox",
+    "value": true,
+    "label": "Use reward cost",
+    "tooltip": "True - use same cost as Twitch channel point reward cost.\n(1 channel point = 1 bot currency)\nFalse - use custom amount reward",
+    "group": "Conversion"
+  },
+  "defaultRewardCost": {
+    "type": "numberbox",
+    "label": "Custom amount reward",
+    "value": 1000,
+    "tooltip": "Specify the amount of channel currency to be awarded.",
+    "group": "Conversion"
+  },
+  "minDiff": {
+    "type": "numberbox",
+    "label": "Lower difference",
+    "value": 100,
+    "tooltip": "Difference UNDER the standard amount.\nLower bound = Standard amount - lower difference",
+    "group": "Conversion"
+  },
+  "maxDiff": {
+    "type": "numberbox",
+    "label": "Upper difference",
+    "value": 100,
+    "tooltip": "Difference OVER the standard amount.\nUpper bound = Standard amount + upper difference",
+    "group": "Conversion"
+  }
+}
