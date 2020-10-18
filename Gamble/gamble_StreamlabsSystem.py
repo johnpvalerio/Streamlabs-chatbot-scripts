@@ -25,6 +25,10 @@ settings = {}
 
 
 def Init():
+    """
+    Init settings setup
+    :return: None
+    """
     global settings
 
     path = os.path.dirname(__file__)
@@ -47,6 +51,11 @@ def Init():
 
 
 def Execute(data):
+    """
+    Processes/validates data to execute gambling game
+    :param data: Data - chat message object
+    :return: None
+    """
     if data.IsChatMessage() and (
             data.GetParam(0).lower() == settings["command"] or data.GetParam(0).lower() == settings["alias"]) and (
             (settings["liveOnly"] and Parent.IsLive()) or (not settings["liveOnly"])):
@@ -115,9 +124,18 @@ def Execute(data):
 
 
 def ReloadSettings(jsonData):
+    """
+    Reload settings
+    :param jsonData: JSON data
+    :return: None
+    """
     Init()
     return
 
 
 def Tick():
+    """
+    Clock tick
+    :return: None
+    """
     return

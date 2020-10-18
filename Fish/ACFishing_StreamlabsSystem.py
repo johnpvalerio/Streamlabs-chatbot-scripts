@@ -41,6 +41,10 @@ cdStopTime = 0              # when the event is activated again
 
 
 def Init():
+    """
+    Init settings setup
+    :return: None
+    """
     global settings, fish, isActive, activeStopTime, maxRange, usersDone
 
     path = os.path.dirname(__file__)
@@ -172,6 +176,11 @@ def updateBiggestCatch(user, item, price):
 
 
 def Execute(data):
+    """
+    Processes/validates data to execute fishing game
+    :param data: Data - chat message object
+    :return: None
+    """
     global usersDone
     if data.IsChatMessage() and (
             data.GetParam(0).lower() == settings["command"] or data.GetParam(0).lower() == settings["alias"]) and (
@@ -233,6 +242,11 @@ def Execute(data):
 
 
 def ReloadSettings(jsonData):
+    """
+    Reload settings
+    :param jsonData: JSON data
+    :return: None
+    """
     Init()
     return
 

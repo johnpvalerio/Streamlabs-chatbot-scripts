@@ -25,6 +25,10 @@ settings = {}
 
 
 def Init():
+    """
+    Init settings setup
+    :return: None
+    """
     global settings
 
     path = os.path.dirname(__file__)
@@ -45,6 +49,11 @@ def Init():
 
 
 def Execute(data):
+    """
+    Processes/validates data to execute dice rolling game
+    :param data: Data - chat message object
+    :return: None
+    """
     if data.IsChatMessage() and (
             data.GetParam(0).lower() == settings["command"] or data.GetParam(0).lower() == settings["alias"]) and (
             (settings["liveOnly"] and Parent.IsLive()) or (not settings["liveOnly"])):
@@ -63,7 +72,7 @@ def Execute(data):
                 if settings["numDiceCap"] < int(userInput[:index_d]) or\
                         int(userInput[:index_d]) < 1:     # x
                     return
-                if userInput[index_d] != 'D':                             # d
+                if userInput[index_d] != 'D':             # d
                     return
                 if settings["typeDiceCap"] < int(userInput[index_d+1:]) or\
                         int(userInput[index_d+1:]) < 1:    # y
@@ -105,9 +114,18 @@ def Execute(data):
 
 
 def ReloadSettings(jsonData):
+    """
+    Reload settings
+    :param jsonData: JSON data
+    :return: None
+    """
     Init()
     return
 
 
 def Tick():
+    """
+    Clock tick
+    :return: None
+    """
     return
