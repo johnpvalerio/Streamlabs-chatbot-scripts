@@ -7,7 +7,6 @@ import os
 import clr
 import time
 
-
 clr.AddReference("IronPython.SQLite.dll")
 clr.AddReference("IronPython.Modules.dll")
 # ---------------------------------------
@@ -23,8 +22,8 @@ Version = "1.0.0"
 # ---------------------------------------
 configFile = "config.json"
 settings = {}
-triggerTime = None       # time when to activate
-isActivating = True
+triggerTime = None  # time when to activate
+isActivating = True  # bool check to trigger (one time or continuous)
 
 
 def Init():
@@ -40,7 +39,8 @@ def Init():
             "intervalHrs": 2,
             "intervalMin": 0,
             "intervalSec": 0,
-            "pts": 200
+            "pts": 200,
+            "outputMsg": "$time $points $currency"
         }
 
 
@@ -75,7 +75,6 @@ def Tick():
         Parent.Log(ScriptName, "Starting time: " + str(triggerTime))
     # trigger
     if isActivating and time.time() >= triggerTime:
-        Parent.Log(ScriptName, "Activating")
         viewers = []
         pts = []
         for u in Parent.GetViewerList():
@@ -86,11 +85,25 @@ def Tick():
         triggerTime = nextTime()
         if settings["useOneTime"]:
             isActivating = False
+
+        output = settings["outputMsg"]
+
+        timeStr = (str(settings["intervalHrs"]) + 'h') if settings["intervalHrs"] > 0 else ""
+        timeStr += (str(settings["intervalMin"]) + 'min') if settings["intervalMin"] > 0 else ""
+        timeStr += (str(settings["intervalSec"]) + 'sec') if settings["intervalSec"] > 0 else ""
+
+        output = output.replace('$time', timeStr)
+        output = output.replace('$points', str(settings["pts"]))
+        output = output.replace('$currency', Parent.GetCurrencyName())
+
+        # Parent.Log(ScriptName, output)
+        Parent.SendStreamMessage(output)
+
     return
 
 
 def nextTime():
-    return time.time() +\
-          settings["intervalHrs"] * 60 * 60 +\
-          settings["intervalMin"] * 60 +\
-          settings["intervalSec"]
+    return time.time() + \
+           settings["intervalHrs"] * 60 * 60 + \
+           settings["intervalMin"] * 60 + \
+           settings["intervalSec"]
