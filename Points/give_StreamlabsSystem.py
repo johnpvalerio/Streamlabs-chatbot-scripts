@@ -139,8 +139,9 @@ def Execute(data):
             ((settings["liveOnly"] and Parent.IsLive()) or
              (not settings["liveOnly"])):
 
+        Parent.Log(ScriptName, data.User + ' isMod: ' + str(Parent.HasPermission(data.User, "Moderator", "")))
         # check permissions - error
-        if Parent.HasPermission(data.User, "Moderator", ""):
+        if not Parent.HasPermission(data.User, "Moderator", ""):
             Parent.Log(ScriptName, 'no perm')
             return
         # check if empty args - error
