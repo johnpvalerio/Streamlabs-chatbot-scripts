@@ -59,12 +59,19 @@ def Unload():
     :return: None
     """
     global triggerTime, isActivating
+    Parent.Log(ScriptName, str(triggerTime))
     triggerTime = None
     isActivating = True
+    Parent.Log(ScriptName, "unload")
     return
 
 
 def Tick():
+    """
+    Clock tick
+    sets and triggers activation
+    :return: None
+    """
     global triggerTime, isActivating
     # if not live, do nothing
     if not Parent.IsLive():
@@ -96,13 +103,17 @@ def Tick():
         output = output.replace('$points', str(settings["pts"]))
         output = output.replace('$currency', Parent.GetCurrencyName())
 
-        # Parent.Log(ScriptName, output)
+        Parent.Log(ScriptName, str(settings["pts"]) + ' ' + str(viewers))
         Parent.SendStreamMessage(output)
 
     return
 
 
 def nextTime():
+    """
+    Converts settings time into seconds
+    :return: None
+    """
     return time.time() + \
            settings["intervalHrs"] * 60 * 60 + \
            settings["intervalMin"] * 60 + \
