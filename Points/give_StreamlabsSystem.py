@@ -25,6 +25,13 @@ NBVIEWERSCAP = 3
 
 
 def Init():
+<<<<<<< HEAD
+=======
+    """
+    Init settings setup
+    :return: None
+    """
+>>>>>>> master
     global settings
 
     path = os.path.dirname(__file__)
@@ -204,9 +211,24 @@ def Execute(data):
 
 
 def ReloadSettings(jsonData):
+<<<<<<< HEAD
+=======
+    """
+    Reload settings
+    :param jsonData: JSON data
+    :return: None
+    """
+>>>>>>> master
     Init()
     return
 
 
 def Tick():
+<<<<<<< HEAD
+=======
+    """
+    Clock tick
+    :return: None
+    """
+>>>>>>> master
     return
