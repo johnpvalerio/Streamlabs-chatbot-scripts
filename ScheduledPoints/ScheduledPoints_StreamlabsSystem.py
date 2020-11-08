@@ -27,6 +27,10 @@ isActivating = True  # bool check to trigger (one time or continuous)
 
 
 def Init():
+    """
+    Init settings setup
+    :return: None
+    """
     global settings
 
     path = os.path.dirname(__file__)
@@ -45,10 +49,20 @@ def Init():
 
 
 def Execute(data):
+    """
+    /
+    :param data: /
+    :return: /
+    """
     return
 
 
 def ReloadSettings(jsonData):
+    """
+    Reload settings
+    :param jsonData: JSON data
+    :return: /
+    """
     Init()
     return
 
