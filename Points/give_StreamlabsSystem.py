@@ -15,7 +15,7 @@ ScriptName = "Default Points Giving Script"
 Website = "https://github.com/johnpvalerio"
 Description = "Script for simpler points giving in Streamlabs Bot."
 Creator = "AegisBlue"
-Version = "1.1.0"
+Version = "1.2.0"
 # ---------------------------------------
 # Variables
 # ---------------------------------------
@@ -41,7 +41,8 @@ def Init():
             "alias": "!g",
             "liveOnly": False,
             "defaultPoints": 50,
-            "outputMsg": "Successfully given $user $points $currency"
+            "outputMsg": "Successfully given $user $points $currency",
+            "debugMode": False
         }
 
 
@@ -145,12 +146,15 @@ def Execute(data):
 
         Parent.Log(ScriptName, data.User + ' isMod: ' + str(Parent.HasPermission(data.User, "Moderator", "")))
         # check permissions - error
-        if not Parent.HasPermission(data.User, "Moderator", ""):
-            Parent.Log(ScriptName, 'no perm')
+
+        if Parent.HasPermission(data.User, "Moderator", ""):
+            if settings["debugMode"]:
+                Parent.Log(ScriptName, 'no perm')
             return
         # check if empty args - error
         if data.GetParamCount() == 1:
-            Parent.Log(ScriptName, 'no extra args')
+            if settings["debugMode"]:
+                Parent.Log(ScriptName, 'no extra args')
             return
 
         # get all users and amount to give
@@ -158,7 +162,8 @@ def Execute(data):
 
         # check if user list empty - error
         if not users:
-            Parent.Log(ScriptName, 'empty users')
+            if settings["debugMode"]:
+                Parent.Log(ScriptName, 'empty users')
             return
 
         # converts to streamlab's user IDs
@@ -184,8 +189,9 @@ def Execute(data):
         getUsernames(failedUsers)  # might be useless
         getUsernames(passUsers)
 
-        Parent.Log(ScriptName, 'pass users: ' + str(passUsers) + ' [' + str(amount) + '] | ' +
-                   'failed users: ' + str(failedUsers))
+        if settings["debugMode"]:
+            Parent.Log(ScriptName, 'pass users: ' + str(passUsers) + ' [' + str(amount) + '] | ' +
+                       'failed users: ' + str(failedUsers))
 
         if 'all' in users:
             passUserStr = 'everyone'

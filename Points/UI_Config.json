@@ -34,5 +34,12 @@
     "label": "Output message",
     "tooltip": "Message to display when successfully given points. use '$user', '$points','$currency' as replacements",
     "group": "General"
+  },
+  "debugMode": {
+    "type": "checkbox",
+    "value": false,
+    "label": "Debug mode",
+    "tooltip": "Enables debug logging",
+    "group": "General"
   }
 }
