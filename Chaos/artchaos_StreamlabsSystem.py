@@ -88,8 +88,7 @@ def Execute(data):
         # check correct target window
         Parent.Log(ScriptName, 'getting active window')
         activeWindow = getActiveWindow()
-        Parent.Log(ScriptName, 'next')
-        if settings['programName'].lower() not in getActiveWindow().lower() or settings['programName'].lower() == '':
+        if settings['programName'].lower() not in activeWindow.lower() or settings['programName'].lower() == '':
             if settings["debugMode"]:
                 Parent.Log(ScriptName, activeWindow + ' not the target window')
             return
@@ -125,6 +124,7 @@ def getActiveWindow():
     Parent.Log(ScriptName, str(hwnd) + ' - ' + str(length) + ' ' + str(buff))
 
     ctypes.windll.user32.GetWindowTextW(hwnd, buff, length + 1)
+
     return buff.value.encode('utf-8')
 
 def randomHotkey():
