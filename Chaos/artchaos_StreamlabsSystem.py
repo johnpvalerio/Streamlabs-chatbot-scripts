@@ -11,7 +11,6 @@ sys.platform = "win32"
 import keyboard as kb
 import time
 import ctypes
-import mouse
 
 clr.AddReference("IronPython.SQLite.dll")
 clr.AddReference("IronPython.Modules.dll")
@@ -121,7 +120,6 @@ def getActiveWindow():
     hwnd = ctypes.windll.user32.GetForegroundWindow()
     length = ctypes.windll.user32.GetWindowTextLengthW(hwnd)
     buff = ctypes.create_unicode_buffer(length + 1)
-    Parent.Log(ScriptName, str(hwnd) + ' - ' + str(length) + ' ' + str(buff))
 
     ctypes.windll.user32.GetWindowTextW(hwnd, buff, length + 1)
 
