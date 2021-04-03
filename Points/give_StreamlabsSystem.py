@@ -15,7 +15,7 @@ ScriptName = "Default Points Giving Script"
 Website = "https://github.com/johnpvalerio"
 Description = "Script for simpler points giving in Streamlabs Bot."
 Creator = "AegisBlue"
-Version = "1.2.0"
+Version = "1.2.1"
 # ---------------------------------------
 # Variables
 # ---------------------------------------
@@ -147,7 +147,7 @@ def Execute(data):
         Parent.Log(ScriptName, data.User + ' isMod: ' + str(Parent.HasPermission(data.User, "Moderator", "")))
         # check permissions - error
 
-        if Parent.HasPermission(data.User, "Moderator", ""):
+        if not Parent.HasPermission(data.User, "Moderator", ""):
             if settings["debugMode"]:
                 Parent.Log(ScriptName, 'no perm')
             return
