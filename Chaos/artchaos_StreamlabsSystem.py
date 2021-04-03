@@ -9,6 +9,7 @@ import clr
 
 sys.platform = "win32"
 import keyboard as kb
+import mouse as ms
 import time
 import ctypes
 
@@ -83,6 +84,14 @@ def randomHotkey():
     length = len(hotkeyList)
     rng = Parent.GetRandom(0, length)
     return hotkeyList[rng]
+
+def activate(cmd):
+    """
+    Keep spinning while mouse is held, once released do action
+    """
+    while(ms.is_pressed()):
+        continue
+    kb.send(cmd)
 
 def ReloadSettings(jsonData):
     """
@@ -224,8 +233,8 @@ def EventReceiverRewardRedeemed(sender, e):
         return
 
     action = randomHotkey()
-    kb.send(action[0])
-
+    # kb.send(action[0])
+    activate(action[0])
     userName = e.DisplayName
     output = settings["outputMsg"]
     output = output.replace('$user', userName)
