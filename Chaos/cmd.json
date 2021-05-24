@@ -1,0 +1,18 @@
+{
+    "good":[
+        ["b", "Brush change"],
+        ["ctrl+s", "Save"]
+    ],
+    "bad":[
+        ["q", "Brush change"],
+        ["d", "Brush change"],
+        ["z", "Brush change"],
+        ["num1", "Brush change"],
+        ["ctrl+z", "Undo"],
+        ["ctrl+y", "Redo"],
+        ["'", "Rotate"],
+        ["u", "Symmetry"],
+        ["ctrl++", "Zoom in"],
+        ["ctrl+-", "Zoon out"]
+    ]
+}

@@ -27,7 +27,9 @@ Version = "1.1.0"
 # Variables
 # ---------------------------------------
 configFile = "config.json"
+cmdFile = "cmd.json"
 settings = {}
+commands = {}
 EventReceiver = None
 
 def Init():
@@ -41,12 +43,23 @@ def Init():
     try:
         with codecs.open(os.path.join(path, configFile), encoding='utf-8-sig', mode='r') as file:
             settings = json.load(file, encoding='utf-8-sig')
+        with codecs.open(os.path.join(path, cmdFile), encoding='utf-8-sig', mode='r') as file:
+            commands = json.load(file, encoding='utf-8-sig')
     except IOError:
         settings = {
             "rewardName": "chaos",
             "programName": "",
-            "outputMsg": "$user has chosen $action",
+            "outputMsg": "{user} has chosen {action}",
             "debugMode": False
+        }
+        commands = {
+            'good':[
+                ('ctrl+page down', 'Zoom Out'), 
+                ('ctrl+Z', "Undo")
+            ],
+            'bad':[
+                ('ctrl+s', 'Save')
+            ]
         }
 
 
@@ -63,12 +76,17 @@ def getActiveWindow():
     :param:
     :return: string - active window name
     """
-    time.sleep(2)
+    if settings["debugMode"]:
+        time.sleep(2)
     hwnd = ctypes.windll.user32.GetForegroundWindow()
     length = ctypes.windll.user32.GetWindowTextLengthW(hwnd)
     buff = ctypes.create_unicode_buffer(length + 1)
 
-    ctypes.windll.user32.GetWindowTextW(hwnd, buff, length + 1)
+    try:
+        ctypes.windll.user32.GetWindowTextW(hwnd, buff, length + 1)
+    except Exception as e:
+        if settings["debugMode"]:
+            Parent.Log(ScriptName, str(e))
 
     return buff.value.encode('utf-8')
 
@@ -78,9 +96,9 @@ def randomHotkey():
     :param:
     :return: tuple - (command key, command name)
     """
-    badHotkeys = [('ctrl+page down', 'Zoom Out'), ('ctrl+Z', "Undo")]
-    goodHotkeys = [('ctrl+s', 'Save')]
-    hotkeyList= badHotkeys + goodHotkeys
+    badHotkeys = commands['bad']
+    goodHotkeys = commands['good']
+    hotkeyList = badHotkeys + goodHotkeys
     length = len(hotkeyList)
     rng = Parent.GetRandom(0, length)
     return hotkeyList[rng]
@@ -233,12 +251,11 @@ def EventReceiverRewardRedeemed(sender, e):
         return
 
     action = randomHotkey()
-    # kb.send(action[0])
     activate(action[0])
     userName = e.DisplayName
-    output = settings["outputMsg"]
-    output = output.replace('$user', userName)
-    output = output.replace('$action', action[1])
+    output = settings["outputMsg"].format(user=userName, action=action[1])
+    # output = output.replace('$user', userName)
+    # output = output.replace('$action', action[1])
 
     if settings["debugMode"]:
         Parent.Log(ScriptName, 'activating - ' + output)
