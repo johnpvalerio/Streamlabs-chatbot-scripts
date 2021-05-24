@@ -68,8 +68,6 @@ def Init():
         }
 
 
-
-
 def Execute(data):
     """
     Processes/validates data to execute gambling game
@@ -113,8 +111,6 @@ def Execute(data):
         activate(action[0])
 
         output = settings["outputMsg"].format(user=userName, action=action[1])
-        # output = output.replace('$user', userName)
-        # output = output.replace('$action', action[1])
 
         if settings["debugMode"]:
             Parent.Log(ScriptName, 'activating - ' + output)
@@ -143,7 +139,7 @@ def getActiveWindow():
         ctypes.windll.user32.GetWindowTextW(hwnd, buff, length + 1)
     except Exception as e:
         if settings["debugMode"]:
-            Parent.Log(ScriptName, str(e))
+            Parent.Log(ScriptName, str(e) + buff.value.encode('utf-8'))
 
     return buff.value.encode('utf-8')
 
@@ -156,7 +152,6 @@ def randomHotkey():
     badHotkeys = commands['bad']
     goodHotkeys = commands['good']
     hotkeyList= badHotkeys + goodHotkeys
-    # hotkeyList= [('ctrl+z+z+z+z', 'Undo')]
     length = len(hotkeyList)
     rng = Parent.GetRandom(0, length)
     return hotkeyList[rng]
