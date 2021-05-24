@@ -1,0 +1,32 @@
+{
+    "output_file": "config.json",
+
+    "rewardName": {
+        "type": "textbox",
+        "value": "",
+        "label": "Reward name",
+        "tooltip": "Name of the Twitch channel point reward",
+        "group": "General"
+    },
+    "programName": {
+        "type": "textbox",
+        "value": "",
+        "label": "Target program name",
+        "tooltip": "Commands will only work on this program name if it is the main program window active.",
+        "group": "General"
+    },
+    "outputMsg": {
+        "type": "textbox",
+        "value": "$user has chosen $action",
+        "label": "Output message",
+        "tooltip": "Message to display when successfully given points. use '$user', '$action' as replacements",
+        "group": "General"
+    },
+    "debugMode": {
+        "type": "checkbox",
+        "value": false,
+        "label": "Display debug logs",
+        "tooltip": "Logs displayed at Scripts>Logs (top right)",
+        "group": "General"
+    }
+}
