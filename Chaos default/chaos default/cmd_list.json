@@ -7,16 +7,14 @@
         ["q", "Painter Brush Change", 1],
         ["d", "Decoration Brush Change", 1],
         ["z", "Canvas Brush Change", 1],
-        ["c", "Eraser", 1],
         ["num1", "Flower Brush Change", 1],
-        ["ctrl++", "Zoom in", 1],
-        ["ctrl+-", "Zoom out", 1],
+        ["u", "Symmetry", 1],
         ["ctrl+z", "Undo", 1],
         ["ctrl+y", "Redo", 1],
-        ["u", "Geometry", 1],
-        ["num2", "Symmetry", 1],
+        ["ctrl++", "Zoom in", 1],
+        ["ctrl+-", "Zoom out", 1],
         ["'", "Rotate", 23],
-        ["[", "Smaller Brush Size", 50],
+        ["[", "Smaller Brush Size", 5],
         ["]", "Bigger Brush Size", 200]
     ]
 }

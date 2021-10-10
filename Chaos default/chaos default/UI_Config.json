@@ -1,0 +1,67 @@
+{
+    "output_file": "config.json",
+
+    "liveOnly": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Live Only Mode",
+        "tooltip": "True if you want it to only run when you are live",
+        "group" : "General"
+    },
+    "command": {
+        "type": "textbox",
+        "value": "!chaos",
+        "label": "Command",
+        "tooltip": "Name of the command",
+        "group": "General"
+    },
+    "programName": {
+        "type": "textbox",
+        "value": "",
+        "label": "Target program name",
+        "tooltip": "Commands will only work on this program name if it is the main program window active.",
+        "group": "General"
+    },
+    "outputMsg": {
+        "type": "textbox",
+        "value": "{user} has chosen {action}",
+        "label": "Output message",
+        "tooltip": "Message to display when successfully given points. use '{user}', '{action}' as replacements",
+        "group": "General"
+    },
+    "useCost": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Pay to use the command",
+        "tooltip": "Enable/Disable user cooldown",
+        "group": "Cost"
+    },
+    "cost": {
+        "type": "numberbox",
+        "label": "Command cost",
+        "value": 1000,
+        "tooltip": "Cost to use the command.",
+        "group": "Cost"
+    },
+    "userCd": {
+        "type": "numberbox",
+        "label": "User cooldown (seconds)",
+        "value": 15,
+        "tooltip": "Cooldown in seconds. Same user is less likely to activate command if set higher than global cooldown.",
+        "group": "Cooldown"
+    },
+    "globalCd": {
+        "type": "numberbox",
+        "label": "Global cooldown (seconds)",
+        "value": 10,
+        "tooltip": "Cooldown in seconds.",
+        "group": "Cooldown"
+    },
+    "debugMode": {
+        "type": "checkbox",
+        "value": false,
+        "label": "Display debug logs",
+        "tooltip": "Logs displayed at Scripts>Logs (top right)",
+        "group": "General"
+    }
+}

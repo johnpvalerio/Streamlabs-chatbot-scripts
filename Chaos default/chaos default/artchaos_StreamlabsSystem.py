@@ -149,8 +149,8 @@ def randomHotkey():
     :param:
     :return: tuple - (command key, command name)
     """
-    badHotkeys = commands.get('bad', [])
-    goodHotkeys = commands.get('good', [])
+    badHotkeys = commands['bad']
+    goodHotkeys = commands['good']
     hotkeyList= badHotkeys + goodHotkeys
     length = len(hotkeyList)
     rng = Parent.GetRandom(0, length)
